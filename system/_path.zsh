@@ -6,6 +6,6 @@ export DEV_TOOLS="${DEV_HOME}/TOOLS"
 export XCTOOL_HOME="${DEV_TOOLS}/xctool"
 
 #Adding Android SDK
-export ANDROID_HOME="/Applications/Android Studio.app/sdk"
+export ANDROID_HOME="/Applications/android-sdk"
 export PATH=$PATH:${ANDROID_HOME}/platform-tools
 export PATH=$PATH:${ANDROID_HOME}/tools
