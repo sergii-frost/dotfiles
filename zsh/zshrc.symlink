@@ -37,6 +37,9 @@ do
   source $file
 done
 
+# set theme
+ZSH_THEME=agnoster
+
 #Enable 'z' magic
 . $ZSH/zsh/z-zsh/z.sh
 function precmd () {
@@ -44,3 +47,17 @@ function precmd () {
 }
 
 unset config_files
+eval $(thefuck --alias)
+
+# set tab title to cwd
+function precmd() {
+  if command git rev-parse --git-dir > /dev/null 2>&1; then
+    window_label=$(git rev-parse --show-toplevel)
+    tab_label=$(echo $window_label | awk -F\/ '{print "[git] " $NF}')
+  else
+    window_label=${PWD/${HOME}/\~}
+    tab_label=$window_label
+  fi
+  echo -ne "\e]2;${window_label}\a"
+  echo -ne "\e]1;${tab_label: -24}\a"
+}
