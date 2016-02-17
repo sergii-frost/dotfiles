@@ -8,3 +8,7 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias chrome='open -a "Google Chrome" '
+alias safari='open -a "Safari" '
+alias tree='tree -CL '
