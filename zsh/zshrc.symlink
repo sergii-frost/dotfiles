@@ -39,7 +39,7 @@ do
 done
 
 # set theme
-ZSH_THEME=agnoster
+ZSH_THEME="cobalt2"
 
 #Enable 'z' magic
 . $ZSH/zsh/z-zsh/z.sh
